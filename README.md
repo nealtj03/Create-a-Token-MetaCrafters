@@ -65,3 +65,58 @@ This function is used to burn (destroy) tokens from a specified address. The tot
 ```solidity
 // Mint 1000 tokens to a specific address
 myToken.mint(0xAbc..., 1000);
+
+## Getting Started
+
+### Executing the Program
+
+To run this program, you can use [Remix](https://remix.ethereum.org/), an online Solidity IDE. Follow these steps:
+
+1. Go to the [Remix website](https://remix.ethereum.org/).
+2. Create a new file by clicking on the "+" icon in the left-hand sidebar. Name the file `MyToken.sol`.
+3. Copy and paste the following code into the file:
+
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.18;
+
+contract MyToken {
+    string public tokenName = "Tiktok";
+    string public tokenAbbrv = "TKTK";
+    uint public totalSupply;
+
+    mapping(address => uint) public balances;
+
+    // Mint function
+    function mint(address _address, uint _value) public {
+        totalSupply += _value;
+        balances[_address] += _value;
+    }
+
+    // Burn function
+    function burn(address _address, uint _value) public {
+        require(balances[_address] >= _value, "Not enough tokens to burn");
+        totalSupply -= _value;
+        balances[_address] -= _value;
+    }
+}
+
+4. To compile the code:
+  Click on the "Solidity Compiler" tab in the left-hand sidebar.
+  Make sure the "Compiler" option is set to version 0.8.18 (or another compatible version).
+  Click on the "Compile MyToken.sol" button.
+
+5. Once the code is compiled, deploy the contract:
+  Click on the "Deploy & Run Transactions" tab in the left-hand sidebar.
+  Select the "MyToken" contract from the dropdown menu.
+  Click on the "Deploy" button.
+
+6. After deploying, you can interact with the contract by minting or burning tokens:
+  To mint tokens, call the mint function, providing the address and the token amount.
+  To burn tokens, call the burn function, ensuring that the address has enough tokens to burn.
+
+## Author
+Neal Tracy D. Jestingor | 202111095@FIT.EDU.PH
+
+##License
+This project is licensed under the MIT License
