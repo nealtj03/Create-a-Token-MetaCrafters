@@ -59,17 +59,6 @@ This function is used to burn (destroy) tokens from a specified address. The tot
 - **Mint**: Emitted when tokens are minted.
 - **Burn**: Emitted when tokens are burned.
 
-## Example Usage
-
-### Minting Tokens:
-```solidity
-// Mint 1000 tokens to a specific address
-myToken.mint(0xAbc..., 1000);
-
-### Burning Tokens:
-// Burn 500 tokens from a specific address
-myToken.burn(0xAbc..., 500);
-
 ## Getting Started
 
 ### Executing the Program
