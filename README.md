@@ -68,6 +68,18 @@ To run this program, you can use [Remix](https://remix.ethereum.org/), an online
 1. Go to the [Remix website](https://remix.ethereum.org/).
 2. Create a new file by clicking on the "+" icon in the left-hand sidebar. Name the file `MyToken.sol`.
 3. Copy and paste the following code into the file:
+4. To compile the code:
+  Click on the "Solidity Compiler" tab in the left-hand sidebar.
+  Make sure the "Compiler" option is set to version 0.8.18 (or another compatible version).
+  Click on the "Compile MyToken.sol" button.
+5. Once the code is compiled, deploy the contract:
+  Click on the "Deploy & Run Transactions" tab in the left-hand sidebar.
+  Select the "MyToken" contract from the dropdown menu.
+  Click on the "Deploy" button.
+6. After deploying, you can interact with the contract by minting or burning tokens:
+  To mint tokens: Call the mint function, providing the address and the token amount.
+  To burn tokens: Call the burn function, ensuring that the address has enough tokens to burn.
+
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -93,18 +105,11 @@ contract MyToken {
         balances[_address] -= _value;
     }
 }
+```
 
-4. To compile the code:
-  Click on the "Solidity Compiler" tab in the left-hand sidebar.
-  Make sure the "Compiler" option is set to version 0.8.18 (or another compatible version).
-  Click on the "Compile MyToken.sol" button.
+### Author:
+Neal Tracy D. Jestingor | 202111095@fit.edu.ph
 
-5. Once the code is compiled, deploy the contract:
-  Click on the "Deploy & Run Transactions" tab in the left-hand sidebar.
-  Select the "MyToken" contract from the dropdown menu.
-  Click on the "Deploy" button.
-
-6. After deploying, you can interact with the contract by minting or burning tokens:
-  To mint tokens: Call the mint function, providing the address and the token amount.
-  To burn tokens: Call the burn function, ensuring that the address has enough tokens to burn.
+### License
+This project is licensed under the MIT License.
 
