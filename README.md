@@ -115,8 +115,8 @@ contract MyToken {
   To mint tokens, call the mint function, providing the address and the token amount.
   To burn tokens, call the burn function, ensuring that the address has enough tokens to burn.
 
-## Author
+### Author
 Neal Tracy D. Jestingor | 202111095@FIT.EDU.PH
 
-##License
+###License
 This project is licensed under the MIT License
