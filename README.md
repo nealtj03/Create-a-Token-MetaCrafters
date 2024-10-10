@@ -66,6 +66,10 @@ This function is used to burn (destroy) tokens from a specified address. The tot
 // Mint 1000 tokens to a specific address
 myToken.mint(0xAbc..., 1000);
 
+### Burning Tokens:
+// Burn 500 tokens from a specific address
+myToken.burn(0xAbc..., 500);
+
 ## Getting Started
 
 ### Executing the Program
